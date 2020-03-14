@@ -12,6 +12,8 @@ import objectTool from "@tool/objectTool";
 import cookieTool from "@tool/cookieTool";
 import mathTool from "@tool/mathTool";
 import validateTool from "@tool/validate";
+import logTool from "@tool/log";
+
 
 const generalTool = {
     /**
@@ -68,5 +70,6 @@ export {
     cookieTool,
     mathTool,
     generalTool,
-    validateTool
+    validateTool,
+    logTool
 }

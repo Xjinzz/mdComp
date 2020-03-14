@@ -15,7 +15,7 @@ import {
     mathTool,
     dateTool,
     validateTool,
-} from "../../core/tool/dist/mwutil.min.js";
+} from "mwutil";
 export default {
     name:"home",
     data(){
@@ -27,10 +27,10 @@ export default {
     },
     created(){
         let a = [1,2,{a:1}]
-        console.log(arrayTool.deepClone(a));
+        console.log(arrayTool,objectTool);
     },
     methods:{
-        froze(){
+        froze(){    
             let obj = {a:{a:1}};
             objectTool.deepFreeze(obj);
             console.log(obj);
