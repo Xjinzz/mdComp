@@ -15,8 +15,7 @@ import {
     mathTool,
     dateTool,
     validateTool,
-} from "@util";
-import Log from '../../core/tool/log';
+} from "../../core/tool/dist/mwutil.min.js";
 export default {
     name:"home",
     data(){
@@ -27,11 +26,8 @@ export default {
         }
     },
     created(){
-      
-        let arr = [[1,[2,[3,4]]],[1,[{a:[1,2]}]],3];
-        console.log(arrayTool.deepFlat(arr));
-
-        
+        let a = [1,2,{a:1}]
+        console.log(arrayTool.deepClone(a));
     },
     methods:{
         froze(){
