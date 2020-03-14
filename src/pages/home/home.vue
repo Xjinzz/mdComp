@@ -15,8 +15,7 @@ import {
     mathTool,
     dateTool,
     validateTool,
-    
-} from "../../core/tool/commonUtil";
+} from "@util";
 import Log from '../../core/tool/log';
 export default {
     name:"home",
