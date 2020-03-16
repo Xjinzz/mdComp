@@ -20,7 +20,6 @@ const generalTool = {
      * @description 节流，一定时间内只执行一次
      * @param {Fcuntion}} 要节流的函数
      * @param {Number} wait 节流等待时间
-     * @returns {Function} 节流过后的函数
      * @example 
      *      debounce(function(){},100)
      */
@@ -33,9 +32,8 @@ const generalTool = {
     },
     /**
      * @description 防抖，操作间隔多久之后在调用，如果有调用则重置时间
-     * @param {Fcuntion}} 要节流的函数
-     * @param {Number} wait 节流等待时间
-     * @returns {Function} 节流过后的函数
+     * @param {Fcuntion}} 要防抖的函数
+     * @param {Number} wait 防抖等待时间
      */
     throttle(func, delay = 500) {
         var timer = null;            
@@ -58,8 +56,46 @@ const generalTool = {
      */
     getType (x) {
         return Object.prototype.toString.call(x).slice(8, -1);
+    },
+    /**
+     * @description 比较两个版本号
+     * @params {String} v1 第一个version
+     * @params {String} v2 第二个version
+     * @returns {Boolean} 第一个如果比第二个大则返回true/否则返回false
+     */
+    compareVersion(v1,v2){
+        const arr1 = v1.split('.')
+        const arr2 = v2.split('.')
+        const length1 = arr1.length
+        const length2 = arr2.length
+        const minlength = Math.min(length1, length2)
+        let i = 0
+        for (i ; i < minlength; i++) {
+            let a = parseInt(arr1[i])
+            let b = parseInt(arr2[i])
+            if (a > b) {
+            return true
+            } else if (a < b) {
+            return false
+            }
+        }
+        if (length1 > length2) {
+            for(let j = i; j < length1; j++) {
+            if (parseInt(arr1[j]) != 0) {
+                return true
+            }
+            }
+            return false
+        } else if (length1 < length2) {
+            for(let j = i; j < length2; j++) {
+            if (parseInt(arr2[j]) != 0) {
+                return false
+            }
+            }
+            return false
+        }
+        return false
     }
-
 }
 
 export {
