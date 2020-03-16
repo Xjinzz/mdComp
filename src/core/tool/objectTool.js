@@ -109,7 +109,7 @@ export default {
      * @returns {String} 转换过后的字符串
      */
     toQueryString(source,splitTag = "&"){
-        if(this.isObject(source)){
+        if(!this.isObject(source)){
             return false;
         }
         let str = "";

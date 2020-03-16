@@ -26,8 +26,9 @@ export default {
         }
     },
     created(){
-        let a = [1,2,{a:1}]
-        console.log(arrayTool,objectTool);
+        let a = [1,3,2]
+        console.log(arrayTool.sort(a));
+        console.log(a)
     },
     methods:{
         froze(){    

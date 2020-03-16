@@ -122,6 +122,7 @@ const arrayTool = {
      * @returns {Array} 去重过后的数组,不替换原数组
      */
     uniqueByFiled(array, field) {
+        debugger;
         if (array instanceof Array == false) {
             return;
         }
