@@ -90,11 +90,11 @@ const arrayTool = {
     * @param {*} item 要删除的item
     * @returns {Array} 处理过后的数组
     */ 
-    removeItems: function (array, items) {
+    removeItem: function (array, items) {
         if (array instanceof Array == false) {
             return;
         }
-        items.map((item) => {
+        this.deepClone(array).map((item) => {
             if (typeof item == "object") {
                 this._private.removeSingleObject(array, item);
             }
