@@ -1,6 +1,6 @@
 {
   "name": "mwutil",
-  "version": "1.1.4",
+  "version": "1.2.3",
   "description": "this is a md's util",
   "main": "dist/mwutil.min.js",
   "author": "zhenzong.jin@mwcare.cn",
@@ -11,7 +11,7 @@
   "files":["dist"],
   "devDependencies": {
     "@babel/cli": "^7.7.0",
-    "@babel/core": "^7.7.2",
+    "@babel/core": "^7.1.5",
     "@babel/plugin-syntax-dynamic-import": "^7.2.0",
     "@babel/plugin-transform-runtime": "^7.6.2",
     "@babel/preset-env": "^7.7.1",

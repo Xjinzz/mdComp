@@ -94,15 +94,14 @@ const arrayTool = {
         if (array instanceof Array == false) {
             return;
         }
-        this.deepClone(array).map((item) => {
-            if (typeof item == "object") {
-                this._private.removeSingleObject(array, item);
-            }
-            if (typeof item == "string" || typeof item == "number") {
-                this._private.removeSingleStr(array, item);
-            }
-        })
-        return array;
+        let resultArr = arrayTool.deepClone(array)
+        if (typeof items == "object") {
+            this._private.removeSingleObject(resultArr, items);
+        }
+        if (typeof items == "string" || typeof item == "number") {
+            this._private.removeSingleStr(array, items);
+        }
+        return resultArr;
     },
     /**
      * @description 数组去重
@@ -122,7 +121,6 @@ const arrayTool = {
      * @returns {Array} 去重过后的数组,不替换原数组
      */
     uniqueByFiled(array, field) {
-        debugger;
         if (array instanceof Array == false) {
             return;
         }

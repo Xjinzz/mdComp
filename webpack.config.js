@@ -62,5 +62,6 @@ let webpackConfig = {
 
         }
     },
+    devtool: 'cheap-module-eval-source-map'
 };
 module.exports = merge(webpackConfig, _mergeConfig);

@@ -10,7 +10,7 @@
   "dependencies": {
     "babel-plugin-transform-runtime": "^6.23.0",
     "babel-polyfill": "^6.26.0",
-    "mwutil": "^1.0.8",
+    "mwutil": "^1.2.3",
     "vue": "^2.5.2"
   },
   "devDependencies": {
