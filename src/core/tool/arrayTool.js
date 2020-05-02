@@ -140,7 +140,7 @@ const arrayTool = {
         if (array instanceof Array == false) {
             return [];
         }
-        return array.reduce((total,item) => item[field] ? [...total,item[field]]:total,[]);
+        return array.reduce((total,item) => (item[field] != undefined && item[field] != null) ? [...total,item[field]]:total,[]);
     },
     /**
      * @description 数组排序(仅针对一维数字、字符串数组)
