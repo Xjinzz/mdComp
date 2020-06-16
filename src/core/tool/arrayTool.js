@@ -5,7 +5,7 @@
  * Created by zhenzong.jin on 2020/3/13.
  * 新增
  */
-import { objectTool,stringTool,generalTool } from "@tool/commonUtil";
+import { objectTool,generalTool } from "@tool/commonUtil";
 const arrayTool = {
     _private: {
         getIndexByString: function (array, str) {
@@ -99,7 +99,7 @@ const arrayTool = {
             this._private.removeSingleObject(resultArr, items);
         }
         if (typeof items == "string" || typeof item == "number") {
-            this._private.removeSingleStr(array, items);
+            this._private.removeSingleStr(resultArr, items);
         }
         return resultArr;
     },
