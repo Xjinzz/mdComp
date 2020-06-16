@@ -1,6 +1,6 @@
 {
   "name": "mwutil",
-  "version": "1.2.4",
+  "version": "1.3.0",
   "description": "this is a md's util",
   "main": "dist/mwutil.min.js",
   "author": "zhenzong.jin@mwcare.cn",
