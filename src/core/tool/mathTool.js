@@ -20,7 +20,7 @@ export default {
     random (min,max,num) {
         let number = Math.floor(min + Math.random() * ( (max+1) - min ));
         if(num && this.isNumber(num)){
-            number.toFixed(number);
+            number.toFixed(num);
         }
         return number;
     },
