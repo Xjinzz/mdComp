@@ -17,8 +17,8 @@ export default {
      * @param {Number} num 保留位数 默认不限制
      * @return {Number} 随机数字
      */
-    random (min,max,num) {
-        let number = Math.floor(min + Math.random() * ( (max+1) - min ));
+    random (min,max,num = 2) {
+        let number = min + Math.random() * ( (max+1) - min );
         if(num && this.isNumber(num)){
             number.toFixed(num);
         }
