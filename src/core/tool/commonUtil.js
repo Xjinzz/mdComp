@@ -17,11 +17,9 @@ import logTool from "@tool/log";
 
 const generalTool = {
     /**
-     * @description 节流，一定时间内只执行一次
-     * @param {Fcuntion}} 要节流的函数
-     * @param {Number} wait 节流等待时间
-     * @example 
-     *      debounce(function(){},100)
+     * @description 防抖，操作间隔多久之后在调用，如果有调用则重置时间
+     * @param {Fcuntion}} 要防抖的函数
+     * @param {Number} wait 防抖等待时间
      */
     debounce(fn, wait = 500) {
         var timeout = null;    
@@ -31,9 +29,11 @@ const generalTool = {
         }
     },
     /**
-     * @description 防抖，操作间隔多久之后在调用，如果有调用则重置时间
-     * @param {Fcuntion}} 要防抖的函数
-     * @param {Number} wait 防抖等待时间
+     * @description 节流，一定时间内只执行一次
+     * @param {Fcuntion}} 要节流的函数
+     * @param {Number} wait 节流等待时间
+     * @example 
+     *      debounce(function(){},100)
      */
     throttle(func, delay = 500) {
         var timer = null;            
