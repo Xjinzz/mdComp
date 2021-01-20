@@ -89,6 +89,8 @@ const arrayTool = {
     * @param {Array} array 原始数组
     * @param {*} item 要删除的item
     * @returns {Array} 处理过后的数组
+    * @example
+    *   const newArr = removeItem([1,2,3,])
     */ 
     removeItem: function (array, items) {
         if (array instanceof Array == false) {
@@ -212,6 +214,11 @@ const arrayTool = {
         })
         return _arr;
     },
+    /**
+     * @description 多维数组转为一维
+     * @param {Array} arr
+     * @returns { Array } 处理好的数组
+     */
     deepFlat(arr){
         let _arr = [];
         arr.forEach(item => {
