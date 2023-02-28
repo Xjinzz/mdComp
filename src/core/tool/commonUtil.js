@@ -14,7 +14,6 @@ import mathTool from "@tool/mathTool";
 import validateTool from "@tool/validate";
 import logTool from "@tool/log";
 
-
 const generalTool = {
     /**
      * @description 防抖，操作间隔多久之后在调用，如果有调用则重置时间
@@ -25,7 +24,7 @@ const generalTool = {
         var timeout = null;    
         return function() {        
             if(timeout !== null)   clearTimeout(timeout);        
-            timeout = setTimeout(fn, wait);    
+            timeout = setTimeout(fn.bind(fn.prototype, ...arguments), wait);    
         }
     },
     /**
